@@ -34,9 +34,9 @@ export const reverseString = (str) => {
 };
 
 export const isPalindrome = (str) => {
-  const reverse = reverseString(str);
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === reverse[str.length - i]) {
+  const test = str.toLowerCase();
+  for (let i = 0; i < str.length / 2; i++) {
+    if (test[i] !== test[str.length - i - 1]) {
       return false;
     }
   }
