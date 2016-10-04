@@ -6,8 +6,11 @@ export const isNumberEven = (i) => {
 };
 
 export const getFileExtension = (str) => {
-  // str will be a string, but it may not have a file extension.
-  // Return the file extension (with no period) if it has one, otherwise false
+  const res = str.split('.');
+  if (res.length < 2) {
+    return false;
+  }
+  return res[res.length - 1];
 };
 
 export const longestString = (arr) => {
