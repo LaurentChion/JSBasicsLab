@@ -30,15 +30,17 @@ export const longestString = (arr) => {
 };
 
 export const reverseString = (str) => {
-  // str will be an string
-  // Return a new string who's characters are in the opposite order to str's.
   return str.split('').reverse().join('');
 };
 
 export const isPalindrome = (str) => {
-  // str will be an string
-  // Return true if it is a palindrome and false otherwise.
-  // It should be case insensitive and not consider space or punctuation.
+  const reverse = reverseString(str);
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === reverse[str.length - i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 export const nestedSum = (arr) => {
