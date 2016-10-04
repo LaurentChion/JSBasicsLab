@@ -14,8 +14,6 @@ export const getFileExtension = (str) => {
 };
 
 export const longestString = (arr) => {
-  // arr will be an array.
-  // Return the longest string in the array
   let i = 0;
   let best = '';
   for (i = 0; i < arr.length; i++) {
@@ -34,6 +32,7 @@ export const longestString = (arr) => {
 export const reverseString = (str) => {
   // str will be an string
   // Return a new string who's characters are in the opposite order to str's.
+  return str.split('').reverse().join('');
 };
 
 export const isPalindrome = (str) => {
